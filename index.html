@@ -576,7 +576,7 @@ dateOrder:'M ddyy',
 theme: 'android',
 display: 'modal',
 mode: 'scroller', 
-animate: 'pop',});
+animate: '',});
 });
 $(document).on('pagebeforeshow','#step3',function(e,data){ 
 $('#NextPayDate').mobiscroll().date({
@@ -585,14 +585,14 @@ dateOrder:'M ddyy',
 theme: 'android',
 display: 'modal',
 mode: 'scroller', 
-animate: 'pop',});
+animate: '',});
 $('#FollowingPayDate').mobiscroll().date({
 dateFormat: 'dd/mm/yyyy',
 dateOrder:'M ddyy',
 theme: 'android',
 display: 'modal',
 mode: 'scroller', 
-animate: 'pop',});
+animate: '',});
 });
 $(document).delegate('#step1', 'pageshow', function () {
 $('input#LoanAmount').slider();
