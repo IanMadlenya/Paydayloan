@@ -1,18 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns = "http://www.w3.org/ns/widgets"
-xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.payday-loans-for.me.uk" versionCode="10" version = "1.0.0">
-<name>Payday loan for me</name>
-<author href="https://www.rainbowgrp.co.uk/" email="info@rainbowgrp.co.uk">Rainbow (UK) Limited</author>
+<widget xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.payday-loans-for.me.uk" versionCode="10" version = "1.0.0">
+<name>VanInsurance</name>
+<author href="https://www.rainbowgrp.co.uk/" email="info@rainbowgrp.co.uk">Rainbow (UK) Limited </author>
 <description>Day loans or cash advances</description>
+
 <gap:platforms>
+<gap:platform name="android" minVersion="2.1" />
+<gap:platform name="webos" />
+<gap:platform name="symbian.wrt" />
 <gap:platform name="blackberry" project="widgets" />
 </gap:platforms>
-<gap:splash src="splash.png" gap:platform="blackberry" />
+
+<preference name="phonegap-version" value="2.9.0" />
+<preference name="orientation" value="default" />
+<preference name="target-device" value="universal" />
 <preference name="fullscreen" value="true" />
+<preference name="autorotate" value="true" readonly="true" />
 <preference name="stay-in-webview" value="true" />
 <preference name="exit-on-suspend" value="true" />
-<preference name="load-url-timeout" value="16000" />
-<access origin="*" />
+<preference name="load-url-timeout" value="15000" />
+<preference name="AutoHideSplashScreen" value="false" />
+
+
+<icon src="css/img/icon.png" />
+<icon src="css/img/icon.png" gap:platform="android" gap:density="ldpi" />
+<icon src="css/img/icon.png" gap:platform="android" gap:density="mdpi" />
+<icon src="css/img/icon.png" gap:platform="android" gap:density="hdpi" />
+<icon src="css/img/icon.png" gap:platform="android" gap:density="xhdpi" />
 <icon src="css/img/icon.png" gap:platform="blackberry" />
+<icon src="css/img/icon.png" gap:platform="blackberry" gap:state="hover" />
+<icon src="css/img/icon.png" gap:platform="ios" width="57" height="57" />
+<icon src="css/img/icon.png" gap:platform="ios" width="72" height="72" />
+<icon src="css/img/icon.png" gap:platform="ios" width="114" height="114" />
+<icon src="css/img/icon.png" gap:platform="ios" width="144" height="144" />
+<icon src="css/img/icon.png" gap:platform="webos" />
+<icon src="css/img/icon.png" gap:platform="winphone" />
+<icon src="css/img/icon.png" gap:platform="winphone" gap:role="background" />
+
+<gap:splash src="splash.png" gap:platform="android" />
+<gap:splash src="splash.png" gap:platform="blackberry" />
+<gap:splash src="splash.png" gap:platform="ios" />
+<gap:splash src="splash.png" gap:platform="winphone" />
+
+<feature name="http://api.phonegap.com/1.0/network"/>
+
+<access origin="*" />
 <content src="index.html"/>
+
 </widget>
