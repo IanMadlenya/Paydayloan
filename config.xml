@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.payday-loans-for.me.uk" versionCode="10" version = "1.0.0">
+<name>Payday loan for me</name>
+<author href="https://www.rainbowgrp.co.uk/" email="info@rainbowgrp.co.uk">Rainbow (UK) Limited</author>
+<description>Day loans or cash advances</description>
+<gap:platforms>
+<gap:platform name="blackberry" project="widgets" />
+</gap:platforms>
+<gap:splash src="splash.png" gap:platform="blackberry" />
+<preference name="fullscreen" value="true" />
+<preference name="stay-in-webview" value="true" />
+<preference name="exit-on-suspend" value="true" />
+<preference name="load-url-timeout" value="16000" />
+<access origin="*" />
+<icon src="css/img/icon.png" gap:platform="blackberry" />
+<content src="index.html"/>
+</widget>

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<title>Payday Loan Mobile Application</title>
+</head>
+<body>
+<div data-role="page" id="begin" class="type-interior" data-title="Home" data-theme="b">
+<div data-role="header" data-theme="b" data-position="fixed" data-id="header"><h1>Payday loans for me</h1></div>
+<div data-role="content">
+<div class="ui-responsive logo"><img src="css/img/logo-bb-app.png"></div>
+<div class="ui-responsive">
+<div>
+<a href="#about" data-icon="about" data-role="button" data-theme="b" data-corners="true" data-shadow="true" data-inline="false">About</a>
+<a href="#privacy" data-icon="privacy" data-role="button" data-theme="b" data-corners="true" data-shadow="true" data-inline="false">Privacy</a>
+<a href="#step1" data-icon="quote" data-role="button" data-theme="b" data-corners="true" data-shadow="true" data-inline="false">Apply</a>
+</div></div></div></div>
+<div data-role="page" id="step1" class="type-interior" data-title="Personal information" data-theme="b">
+<div data-role="header" data-theme="b" data-position="fixed" data-id="header">
+<h1>Personal information</h1>
+<a href="#begin" data-icon="home" data-role="button" >Home</a>
+</div>
+<div data-role="content">
+<form method="post" id="f_step1" class="msform" action="" data-ajax="false">
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="LoanAmount">Loan Amount</label></div>
+<div class="ui-block-b"><select name="LoanAmount" id="LoanAmount">
+<option value="">Please select</option>
+<option value="100">&#163;100</option>
+<option value="150">&#163;150</option>
+<option value="200">&#163;200</option>
+<option value="250">&#163;250</option>
+<option value="300">&#163;300</option>
+<option value="350">&#163;350</option>
+<option value="400">&#163;400</option>
+<option value="450">&#163;450</option>
+<option value="500">&#163;500</option>
+<option value="550">&#163;550</option>
+<option value="600">&#163;600</option>
+<option value="650">&#163;650</option>
+<option value="700">&#163;700</option>
+<option value="750">&#163;750</option>
+<option value="800">&#163;800</option>
+<option value="850">&#163;850</option>
+<option value="900">&#163;900</option>
+<option value="950">&#163;950</option>
+<option value="1000">&#163;1000</option>
+</select></div></div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="Title">Title:</label></div>
+<div class="ui-block-b"><select name="Title" id="Title" data-native-menu="true" >
+<option value="">Please select</option>
+<option value="Mr">Mr</option>
+<option value="Mrs">Mrs</option>
+<option value="Ms">Ms</option>
+<option value="Miss">Miss</option>
+</select></div></div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="Firstname">Firstname</label></div>
+<div class="ui-block-b"><input name="FirstName" type="text" id="Firstname" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="Surname">Surname</label></div>
+<div class="ui-block-b"><input name="Surname" type="text" id="Surname" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="HomeTelephone">Home Phone</label></div>
+<div class="ui-block-b"><input name="HomeTelephone" type="tel" id="HomeTelephone" maxlength="11" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="MobileNumber">Mobile phone</label></div>
+<div class="ui-block-b"><input name="MobileNumber" type="tel" id="MobileNumber" maxlength="11" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="EmailAddress">Email Address</label></div>
+<div class="ui-block-b"><input type="email" name="EmailAddress" id="EmailAddress" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="DateOfBirth">Date of Birth</label></div>
+<div class="ui-block-b"><input name="DateOfBirth" type="text"  id="DateOfBirth" readonly value="" /></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"></div>
+<div class="ui-block-b"><input type="submit" name="submit1" value="Next step"/></div>
+</div></form></div></div>
+<div data-role="page" id="step2" class="type-interior" data-title="Your Address Details" data-theme="b">
+<div data-role="header" data-theme="b" data-position="fixed" data-id="header">
+<h1>Your Address Details</h1>
+<a href="#begin" data-icon="home" data-role="button">Home</a>
+<a href="#step1" data-icon="back" data-role="button" >Back</a>
+</div>
+<div data-role="content">
+<form method="post" id="f_step2" class="msform" action="" data-ajax="false">
+<div class="map_canvas" style="display:none"></div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="formatted_address">House Number/Name</label></div>
+<div class="ui-block-b"><input name="formatted_address" type="text" id="formatted_address" value="" /></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="locality">County</label></div>
+<div class="ui-block-b"><input type="text" id="locality" name="locality"  value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="TownCity">Town/City</label></div>
+<div class="ui-block-b"><input name="sublocality" type="text" id="TownCity" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="route">Street Name</label></div>
+<div class="ui-block-b"><input name="route" type="text" id="route" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="postal_code">Post Code</label></div>
+<div class="ui-block-b"><input name="postal_code" type="text" id="postal_code" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="TimeAtAddress">Time at Current Address</label></div>
+<div class="ui-block-b"><select name="TimeAtAddress" id="TimeAtAddress" data-native-menu="true">
+<option value="">Please select</option>
+<option value="less_than_1_month">Less than 1 month</option>
+<option value="1_month">1 month</option>
+<option value="2_months">2 months</option>
+<option value="3_months">3 months</option>
+<option value="4_to_6_months">4 to 6 months</option>
+<option value="7_months_to_1_year">7 months to 1 year</option>
+<option value="1_year_to_2_years">1 year to 2 years</option>
+<option value="more_than_2_years">More than 2 years</option>
+</select></div></div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="HomeType">Home Type</label></div>
+<div class="ui-block-b"><select name="HomeType" id="HomeType" data-native-menu="true">
+<option value="">Please select</option>
+<option value="homeowner">Homeowner</option>
+<option value="tenant">Tenant</option>
+<option value="tenantprivate">Tenant private</option>
+<option value="tenanthousingassoc">Tenant housing assoc.</option>
+<option value="tenantcouncil">Tenant council</option>
+<option value="livingwithfamily">Living with family</option>
+</select></div></div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"></div>
+<div class="ui-block-b"><input type="submit" name="submit2" value="Next step" /></div>
+</div></form></div></div>
+<div data-role="page" id="step3" class="type-interior" data-title="Your Employment Details" data-theme="b">
+<div data-role="header" data-theme="b" data-position="fixed" data-id="header">
+<h1>Your Employment Details</h1>
+<a href="#begin" data-icon="home" data-role="button">Home</a>
+<a href="#step2" data-icon="back" data-role="button">Back</a>
+</div>
+<div data-role="content">
+<form method="post" id="f_step3" class="msform" action="" data-ajax="false">
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="PrimaryIncome">Employment Type</label></div>
+<div class="ui-block-b"><select name="PrimaryIncome" id="PrimaryIncome" data-native-menu="true" >
+<option value="">Please select</option>
+<option value="fulltime">Full-Time Employment</option>
+<option value="parttime">Part-Time Employment</option>
+<option value="selfemployed">Self-Employment</option>
+<option value="temporary">Temporary Employment</option>
+<option value="retired">Pension</option>
+<option value="retired">Unemployed</option>
+<option value="benefits">Disability Benefits</option>
+<option value="education">Education</option>
+<option value="carer">Carer</option>
+<option value="homemaker">Homemaker</option>
+<option value="other">Other</option>
+</select></div></div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="AfterTax">Monthly Pay (after tax):</label></div>
+<div class="ui-block-b"><input type="tel" name="AfterTax"  id="AfterTax" data-theme="b" /></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="PayFrequency">Pay Frequency</label></div>
+<div class="ui-block-b"><select name="PayFrequency" id="PayFrequency" data-native-menu="true" >
+<option value="">Please select</option>
+<option value="1">Last working day of month</option>
+<option value="2">Weekly</option>
+<option value="3">Four weekly</option>
+<option value="4">Biweekly</option>
+<option value="5">Twice monthly</option>
+<option value="6">Specific day of month</option>
+<option value="7">Last Monday of month</option>
+<option value="8">Last Tuesday of month</option>
+<option value="9">Last Wednesday of month</option>
+<option value="10">Last Thursday of month</option>
+<option value="11">Last Friday of month</option>
+<option value="12">Specific Date</option>
+</select></div></div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="EmploymentIndustry"> Employment Industry</label></div>
+<div class="ui-block-b"><select name="EmploymentIndustry" id="EmploymentIndustry" data-native-menu="true" >
+<option value="">Please select</option>
+<option value="1">Construction/Manufacturing</option>
+<option value="2">Military</option>
+<option value="3">Health</option>
+<option value="4">Banking/Insurance</option>
+<option value="5">Education</option>
+<option value="6">Civil Service</option> 
+<option value="7">Supermarket/Retail</option> 
+<option value="8">Utilities/Telecom</option> 
+<option value="9">Hotel, Restaurant and</option>
+<option value="10">Leisure</option>
+<option value="11">Other, office based</option>
+<option value="12">Other, not office based</option>
+</select></div></div> 
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="EmployerName">Employer Name</label></div>
+<div class="ui-block-b"><input name="EmployerName" type="text" id="EmployerName" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="WorkNumber">Work Phone</label></div>
+<div class="ui-block-b"><input name="WorkNumber" type="tel" id="WorkNumber" maxlength="11" value="" /></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="JobTitle">Job Title</label></div>
+<div class="ui-block-b"><input name="JobTitle" type="text" id="JobTitle" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="TimeWithEmployer">Time With Employer</label></div>
+<div class="ui-block-b"><select name="TimeWithEmployer" id="TimeWithEmployer" data-native-menu="true" >
+<option value="">Please select</option>
+<option value="1">Less than 1 month</option>
+<option value="2">1 month</option>
+<option value="3">2 months</option>
+<option value="4">3 months</option>
+<option value="5">4 to 6 months</option>
+<option value="6">7 months to 1 year</option>
+<option value="7">1 year to 2 years</option>
+<option value="8">2 years to 4 years</option>
+<option value="9">4 years to 8 years</option>
+<option value="10">Over 8 Years</option>
+</select></div></div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="NextPayDate">Next Pay Date</label></div>
+<div class="ui-block-b"><input name="NextPayDate" type="text"  id="NextPayDate" readonly value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="FollowingPayDate">Following Pay Date</label></div>
+<div class="ui-block-b"><input name="FollowingPayDate" type="text"  id="FollowingPayDate" readonly value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"></div>
+<div class="ui-block-b"><input type="submit" name="submit3" value="Next step" /></div>
+</div></form></div></div>
+<div data-role="page" id="step4" class="type-interior" data-title="Your Bank Details" data-theme="b">
+<div data-role="header" data-theme="b" data-position="fixed" data-id="header">
+<h1>Your Bank Details</h1>
+<a href="#begin" data-icon="home" data-role="button">Home</a>
+<a href="#step3" data-icon="back" data-role="button">Back</a>
+</div>
+<div data-role="content">
+<form method="post" id="f_step4" class="msform" action="" data-ajax="false">
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="PaidIntoBankAccount">Paid into Bank Account</label></div>
+<div class="ui-block-b"><select name="PaidIntoBankAccount" id="PaidIntoBankAccount" data-native-menu="true" >
+<option value="">Please Select</option>
+<option value="0">Yes, UK Account</option>
+<option value="1">Yes, Other Account</option>
+<option value="2">No</option>
+</select></div></div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="DebitCardType">Debit Card Type</label></div>
+<div class="ui-block-b"><select name="DebitCardType" id="DebitCardType" data-native-menu="true" >
+<option value="">Please Select</option>
+<option value="SO">Solo</option>
+<option value="SW">Switch/Maestro</option>
+<option value="MS">Mastercard</option>
+<option value="VD">Visa Delta</option>
+<option value="VI">Visa Debit</option>
+<option value="VE">Visa Electron</option>
+<option value="NO">No Debit Card</option>
+</select></div></div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="HousingExpenditure">Housing Expenditure</label></div>
+<div class="ui-block-b"><input name="HousingExpenditure" type="number" id="HousingExpenditure" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="CreditExpenditure">Credit Expenditure</label></div>
+<div class="ui-block-b"><input name="CreditExpenditure" type="number" id="CreditExpenditure" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="OtherExpenditure">Other Expenditure</label></div>
+<div class="ui-block-b"><input name="OtherExpenditure" type="number" id="OtherExpenditure" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="BankAccountNumber">Bank Account Number</label></div>
+<div class="ui-block-b"><input name="BankAccountNumber" type="number" id="BankAccountNumber" maxlength="10" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"><label for="SortCode">Sort Code</label></div>
+<div class="ui-block-b"><input name="SortCode" type="number" id="SortCode" maxlength="6" value=""/></div>
+</div>
+<div class="ui-grid-a ui-responsive">
+<div class="ui-block-a"></div>
+<div class="ui-block-b"><input id="submit_my_form" type="submit" name="send" value="Submit"/></div>
+</div></form></div></div>
+<div data-role="page" id="about" class="type-interior" data-title="About us" data-theme="b">
+<div data-role="header" data-theme="b" data-position="fixed" data-id="header">
+<h1>About</h1>
+<a href="#begin" data-icon="home" data-role="button" >Home</a>
+<a href="#privacy" data-icon="privacy" data-role="button" >Privacy</a>
+</div>
+<div data-role="content">
+<h1>Pay day loans</h1>
+<h3>are fast loans, also known as same day loans or cash advances,</h3>
+<div class="ui-grid-a ui-responsive about">
+which are designed to assist you in need of an online money loan until their next pay day. Apply for up to a £1000 pay day loan online, 7 days a week, with no need for paperwork, with all loans processed within just 1 hour. The online application form is quick and easy, and only takes 2 minutes to complete! Apply for any amount between £100 - £1000 with just a few touches on your mobile device. Most applications are accepted within minutes, even if your credit history is less than perfect. We work with multiple lenders, so you will get the best rate for your pay day loan application. Instant cash when you need it by applying with our free online application form! Payday Loans for ME! It’s never been so easy!! 
+Easy online application to get money when you need it
+</div>
+<div class="ui-grid-a ui-responsive">
+<div id="result_debug" class="ui-block-a"></div>
+<div class="ui-block-b"></div>
+</div></div></div>
+<div data-role="page" id="privacy" class="type-interior" data-title="Privacy Policy" data-theme="b">
+<div data-role="header" data-theme="b" data-position="fixed" data-id="header">
+<h1>Privacy policy</h1>
+<a href="#begin" data-icon="home" data-role="button" >Home</a>
+<a href="#about" data-icon="about" data-role="button" >About</a>
+</div>
+<div data-role="content">
+<h1><p><strong><span style="text-decoration: underline;">TERMS </span></strong><strong><span style="text-decoration: underline;">AND</span></strong><strong><span style="text-decoration: underline;"> CONDITIONS</span></strong></p></h1>
+<h3><p><strong>Effective Date:&nbsp;01 March 2012</strong></p></h3>
+<div class="ui-responsive about">
+<ol>
+<li><strong>1.</strong><strong>Introduction</strong></li>
+</ol>
+<p>1.1&nbsp;We are Rainbow (UK) Limited. We are registered in the UK under number 7800023. Our registered office is at Northside House, Mount Pleasant, Barnet, Herts EN4 9EE. Our trading address is Unit 8 Saxon House, Upminster Trading Park, Upminster, Essex, RM14 3PJ. Our other contact details are specified on our website.</p>
+<p>&nbsp;</p>
+<p>1.2&nbsp;Please read these terms and conditions carefully. They cancel and replace any previous versions. They cancel and replace any previous versions. By registering on or using our Service (as defined below) you agree to be bound by these terms and conditions.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>2.</strong><strong>Definitions</strong></li>
+</ol>
+<p>2.1&nbsp;Capitalised terms have the following meanings in these terms and conditions:</p>
+<p>2.1.1&nbsp;Service means the services offered by means of our website at www.rainbowgrp.co.uk and/or the Rainbow group of sites as well as the various Rainbow apps and any related software and services.</p>
+<p>2.1.2&nbsp;Supplier means the owner / operator of such a third party website or service.</p>
+<p>2.1.3&nbsp;User means a person who uses our Service (whether or not registered with us).</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>3.</strong><strong>Changes to the terms and conditions</strong></li>
+</ol>
+<p>3.1&nbsp;We may change these terms and conditions by posting the revised version on our website for 21 days before they become effective. Please check our website from time to time. We recommend that you like this page to ensure that you are informed of any changes.&nbsp;You will be bound by the revised agreement if you continue to use our Service following the effective date shown.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>4.</strong><strong>Use of our Service</strong></li>
+</ol>
+<p>4.1&nbsp;We grant Users a limited personal right to use our Service subject to these terms and conditions.</p>
+<p>&nbsp;</p>
+<p>4.2&nbsp;You are not eligible for, and must not use or register on, our Service if you are under 18 years of age or you are not resident in the UK (or other relevant country specified by us on our Service).</p>
+<p>&nbsp;</p>
+<p>4.3&nbsp;You must not supply any personal data of another person (ie information enabling someone to be identified or contacted) via our Service unless that person is 18 years or over and you have obtained that person's explicit written consent;</p>
+<p>&nbsp;</p>
+<p>4.4&nbsp;Your account on our Service is for your personal use only and is non-transferable. You must not authorise or permit any other person to use your account. You must take reasonable care to protect and keep confidential your password and other account or identity information. You must notify us immediately of any apparent breach of security such as loss, theft, misuse or unauthorised disclosure or use of a password. You are responsible for third parties who use your account or identity (unless and to the extent that we are at fault).</p>
+<p>&nbsp;</p>
+<p>4.5&nbsp;You must promptly comply with any reasonable request or instruction by us in connection with the Service.</p>
+<p>&nbsp;</p>
+<p>4.6&nbsp;You must ensure that all information which you provide is accurate and not misleading and that you will update it so that it remains so.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>5.</strong><strong>Third party websites and services</strong></li>
+</ol>
+<p>5.1&nbsp;We link to a range of third party websites or services which offer payday loans and/or various goods and/or services. We do not ourselves offer loans or other financial services. We do not recommend or endorse or accept responsibility for any Supplier or its website, goods or services. You use them at your own risk. Please check very carefully that they are suitable for your requirements, taking appropriate professional and other advice where appropriate.</p>
+<p>&nbsp;</p>
+<p>5.2&nbsp;Any contract for sale or supply of goods or services or other transaction in relation to the third party websites or services is between you and the Supplier. You acknowledge that any legal recourse in connection with such transactions is against the Supplier and not us. Please direct any queries or complaints to the Supplier.</p>
+<p><strong></strong></p>
+<ol>
+<li><strong>6 </strong><strong>Our content</strong></li>
+</ol>
+<p>6.1&nbsp;Any content which we ourselves make available (such as articles on various topics) is intended for very general guidance but we cannot guarantee that it is accurate or up to date. Before acting on such information, you must make your own appropriate enquiries including as to its accuracy and suitability for your purposes and take appropriate professional or other advice. You rely on such information at your own risk.</p>
+<p><strong><em></em></strong></p>
+<ol>
+<li><strong>7.</strong><strong>Functioning of our Service </strong></li>
+</ol>
+<p>7.1&nbsp;We cannot guarantee that the website will be uninterrupted or error-free. We accept no legal responsibility for errors or interruptions. We are entitled to suspend the website for repair, maintenance, improvement or other technical reason.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>8.</strong><strong>Intellectual property rights</strong></li>
+</ol>
+<p>8.1&nbsp;All trade marks, logos, content, layout, graphics, images, photographs, animation, videos, text and software used on the Service are our intellectual property or that of our partners. For the purposes of your personal use only, you may view such material on your screen and print a single copy.&nbsp;You may not otherwise use, sublicense, retrieve, display, modify, copy, print, sell, distribute, download, hire, reverse engineer (unless permitted by applicable law) or create extracts of, or derivative works from, such material without our specific prior written consent.</p>
+<p>&nbsp;</p>
+<p>8.2&nbsp;You must not reverse-engineer or decompile any of our software in any way (except to the extent allowed by applicable law). You must take reasonable steps to ensure that our software is not disclosed to any third party.</p>
+<p><strong></strong></p>
+<p>8.3&nbsp;You acknowledge and agree that any questions, comments, suggestions, ideas, feedback or other information about our Service ("Submissions") which you provide us are non-confidential and shall become our sole property. We shall own exclusive intellectual property rights in, and shall be entitled to the unrestricted use and dissemination of, these Submissions for any purpose, commercial or otherwise, without acknowledgment or compensation to you.<strong> </strong></p>
+<p><strong></strong></p>
+<ol>
+<li><strong>9.</strong><strong>Liability etc</strong></li>
+</ol>
+<p>9.1&nbsp;Nothing in this agreement in any way limits or excludes our liability for negligence causing death or personal injury or for fraudulent misrepresentation or for anything which may not legally be excluded or limited.</p>
+<p>&nbsp;</p>
+<p>9.2&nbsp;&nbsp;You must give us a reasonable opportunity to remedy any matter for which we are potentially liable before you incur any costs remedying the matter yourself.</p>
+<p>&nbsp;</p>
+<p>9.3&nbsp;<strong>Very important: </strong>We shall not be liable for any loss or damage caused by us or our employees or agents in circumstances where:</p>
+<p>9.3.1&nbsp;there is no breach of a legal duty of care owed to you by us or by any of our employees or agents;</p>
+<p>9.3.2&nbsp;such loss or damage was not reasonably foreseeable by both parties;</p>
+<p>9.3.3&nbsp;such loss or damage is caused by you, for example by not complying with this agreement; or</p>
+<p>9.3.4&nbsp;such loss or damage relates to a business.</p>
+<p>&nbsp;</p>
+<p>9.4&nbsp;<strong>Very important:</strong>You will be liable for any reasonably foreseeable loss or damage we suffer arising from your breach of this agreement or misuse of our Service (subject of course to our obligation to mitigate any losses).</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>10.</strong><strong>Act of God</strong></li>
+</ol>
+<p>10.1&nbsp;Neither you nor we are liable for failure to perform or delay in performing any obligation (excluding payment) under this agreement if the failure or delay is caused by any circumstances beyond your or our reasonable control including third party telecommunication failures. <strong> </strong></p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>11.</strong><strong>Transfer</strong></li>
+</ol>
+<p>11.1&nbsp;We may transfer all or part of our rights or duties under this agreement provided we take reasonable steps to ensure that your rights under this agreement are not prejudiced. As this agreement is personal to you, you may not transfer any of your rights or duties under it without our prior written consent.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>12.</strong><strong>English law</strong></li>
+</ol>
+<p>12.1&nbsp;These terms and conditions shall be governed by English law and any disputes will be decided only by the courts of the United Kingdom.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>13.</strong><strong>General</strong></li>
+</ol>
+<p>13.1&nbsp;We may send all notices under this agreement by email to the most recent email address you have supplied to us (unless otherwise stated in this agreement). Headings used in this agreement are for information and not binding. Any failure by either party to exercise or enforce any right or provision of this agreement does not mean this is a waiver (ie that it can't be enforced later). If any part of this agreement is ineffective or unenforceable for any reason, then it will be replaced with a provision which as far as possible achieves the same thing and the rest of the agreement shall continue to apply. A person who is not a party to this agreement shall have no rights under the Contracts (Rights of Third Parties) Act 1999 to enforce any term of this agreement except insofar as expressly stated otherwise.</p>
+<p><strong> </strong></p>
+<ol>
+<li><strong>14.</strong><strong>Complaints</strong></li>
+</ol>
+<p>14.1&nbsp;If you have any complaints, please contact us via the contact details shown on our website or write to our address shown at the start of these terms and conditions.</p>
+<p>&nbsp;</p>
+<p><a href="http://www.adlexsolicitors.co.uk/internet-law/online-terms-and-conditions.htm">Website terms and conditions by internet lawyers Adlex solicitors</a></p>
+<p>&nbsp;</p>
+<p>Version <strong>1.1</strong></p>
+<p>&nbsp;</p>
+<p><strong><span style="text-decoration: underline;">PRIVACY POLICY AND COOKIES INFORMATION</span></strong></p>
+<p><strong></strong></p>
+<p><strong>Effective Date:</strong></p>
+<p><strong></strong></p>
+<ol>
+<li><strong>1.</strong><strong>Who are we?</strong></li>
+</ol>
+<p>1.1&nbsp;We are Rainbow (UK) Limited.<strong> </strong>We own and operate the site at www.rainbowgrp.co.uk and the Rainbow group of sites as well as the various Rainbow apps. Our contact details are in the contact us section on our site. Please contact us if you have any questions or feedback about this policy. We'd be delighted to help.</p>
+<p>&nbsp;</p>
+<p>1.2&nbsp;We are registered with the Information Commissioner's Register of Data Controllers under number <strong>Z7036317</strong>.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>2.</strong><strong>What's the point of this policy?</strong></li>
+</ol>
+<p>2.1&nbsp;The idea is that we tell you how we deal with your personal data. (This is the technical term for information about any identified or identifiable living person). Please read on to find out what kinds of personal data we collect, how we use and protect it, to whom we disclose it and how you can access and rectify it.</p>
+<p>&nbsp;</p>
+<p>2.2&nbsp; Please don't use our service (our website and apps) unless you are completely happy with this policy. If you do use our service, we'll assume that you do accept it.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>3.</strong><strong>Might the policy change?</strong></li>
+</ol>
+<p>3.1&nbsp;It may well do. If so, we will post a revised version on our website. You should check it on our site from time to time. We'll assume you agree to the revised policy if you use the service after the effective date shown at the top of the revised policy.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>4.</strong><strong>What personal or other data do we collect? </strong></li>
+</ol>
+<p>4.1&nbsp; We collect and store the information which you give us via forms on our site - such as your name, address, email address, phone number and so on - or when communicating with us by email or in some other way.</p>
+<p>&nbsp;</p>
+<p>4.2&nbsp;We may receive and store certain information automatically when you interact with us. Examples include the internet protocol (IP) address used to connect your computer to the internet, connection information such as browser type and version, your operating system and platform, a unique reference number linked to the data you enter on our system, login details, the full URL clickstream to, through and from our site (including date and time), cookie number, activity on our website including the pages you visited and searches you made.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>5.</strong><strong>What about cookies?</strong></li>
+</ol>
+<p>5.1&nbsp;We use cookies (or may do so in future). A cookie is a small file of letters and numbers that we put on your computer if you agree.&nbsp;Our site's functionality will be limited if you do not agree. <strong> </strong></p>
+<p><strong> </strong></p>
+<p>5.2&nbsp;Cookies are widely used to make websites work, or work more efficiently, as well as to provide information to the site owner or others. Session cookies are temporary cookies that remain in the cookie file of your browser until you leave the site. Persistent cookies stay in the cookie file of your browser for longer (though how long will depend on the lifetime of the specific cookie). For further information on cookies, visit <a href="http://www.allaboutcookies.org/">www.allaboutcookies.org</a>..<strong> </strong></p>
+<p><strong> </strong></p>
+<p>5.3&nbsp;We use cookies for the following purposes:<strong> </strong></p>
+<p><strong> </strong></p>
+<p>a)&nbsp;<strong><em>Analytical cookies</em></strong><em>:</em> These persistent cookies are used to recognize and count the number of visitors as well as providing other information about the visit such as duration, route through the site and what sites the visitor came from. This information helps us to improve the way our site works, for example by making sure users find what they need easily. These cookies are provided by Google but we may use other providers also. Google requires us to tell you the following: <em></em><em>This website uses Google Analytics, a web analytics service provided by Google, Inc. (Google).&nbsp;Google Analytics uses cookies, which are text files placed on your computer, to help the website analyze how users use the site. The information generated by the cookie about your use of the website (including your IP address) will be transmitted to and stored by Google on servers in the United States. Google will use this information for the purpose of evaluating your use of the website, compiling reports on website activity for website operators and providing other services relating to website activity and internet usage.&nbsp;Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google's behalf. Google will not associate your IP address with any other data held by Google.&nbsp;You may refuse the use of cookies by selecting the appropriate settings on your browser. However please note that if you do this you may not be able to use the full functionality of this website.&nbsp;By using this website, you consent to the processing of data about you by Google in the manner and for the purposes set out above.</em> Click <a href="http://www.google.co.uk/intl/en/analytics/privacyoverview.html">here</a> for information about privacy at Google.<strong> </strong></p>
+<p><strong></strong></p>
+<p>b)&nbsp;<strong><em>Third party advertising cookies: </em></strong> As do many other sites, we use third party advertisers and/or internet advertising companies working for them to fill ad space on our site. These third parties may use persistent cookies and other similar technologies (known as action tags, single pixel gifs and web beacons) to assess information about your visits to this and other sites.&nbsp;This is so they can track the effectiveness of their campaigns (including whether these advertisements are clicked on or viewed by users and later purchases by such users), avoid showing you the same advertisement repeatedly and display advertisements on this and other sites tailored to your preferences. We don't have any access to or control over these third party technologies. If you would like more information about these practices and to know your choices about not having this information used by certain of these companies, please click <a href="http://www.youronlinechoices.com/">here</a>. <strong>[link to: www.youronlinechoices.com].</strong> Please contact the third parties directly for more information about their privacy practices.<strong> </strong></p>
+<p><strong></strong></p>
+<p>5.4&nbsp;&nbsp;Please contact us by the means shown on our website if you wish to withdraw any consent which you have given to the use of cookies. Note that this may impact on the functionality of our site.<strong> </strong></p>
+<p><strong></strong></p>
+<ol>
+<li><strong>6.</strong><strong>How do we use your personal data? </strong></li>
+</ol>
+<p>6.1&nbsp;We use your personal data to provide our services eg send service messages.<strong></strong></p>
+<p>&nbsp;</p>
+<p>6.2&nbsp;We may use your personal data to carry out identity checks or for our own credit scoring.</p>
+<p>&nbsp;</p>
+<p>6.3&nbsp;We use your personal data to help us communicate with you effectively should you try to contact us via our site including verification of any claims you may make. <strong> </strong></p>
+<p><strong></strong></p>
+<p>6.4&nbsp;We may telephone you to check some points regarding your application or to remind you about an upcoming renewal.&nbsp;We may monitor or record any telephone calls with you for customer service and administration purposes.</p>
+<p><strong></strong></p>
+<p>6.5&nbsp;If you have agreed on our site, we may use your personal data to send you texts, emails (or other communications) with details of our or third party goods or services which may be of interest to you including information about special offers or promotions. <strong> </strong></p>
+<p>&nbsp;</p>
+<p>6.6&nbsp;We may use IP addresses or personal data to recognize you when you visit or return to our site so we can track anonymised traffic and usage patterns, to prevent or detect fraud or abuses or to help us improve our site.</p>
+<p>&nbsp;</p>
+<p>6.7&nbsp;&nbsp;We retain personal data in order to comply with legal obligations, enforce our terms and conditions, prevent fraud, collect any fees owed, resolve disputes, troubleshoot problems, assist with any investigations and take other actions as permitted by law.</p>
+<p>&nbsp;</p>
+<p>6.8&nbsp;We may access, remove, alter or store or otherwise use any personal data if we think you have or may have breached our terms and conditions or to enforce our rights or protect the public or where if we are required to do so by law or appropriate authority.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>7.</strong><strong>How do we protect personal data?</strong></li>
+</ol>
+<p>7.1&nbsp;Security is a high priority. We take appropriate precautions to protect personal data from loss, misuse, unauthorised access or disclosure, alteration or destruction using the same safeguards as we use for our own proprietary information.</p>
+<p>&nbsp;</p>
+<p>7.2&nbsp;Don't forget that email and other electronic communications are not secure if they haven't been encrypted. Your communications may pass through servers in a number of countries before they reach us. So we don't accept responsibility for any unauthorised access to or loss of personal data that stems from a cause beyond our control. Nor can we be held responsible for the actions or omissions of other users or third parties who may misuse your personal data which they collect from the site.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>8.</strong><strong>To whom do we disclose personal data? </strong></li>
+</ol>
+<p>8.1&nbsp;Where you complete a form on our site enquiring about loans or other financial services, we supply your information to third party financial services providers to enable them to provide estimates, quotes or information about their services. Those providers may contact (including by telephone / email) for such purposes.</p>
+<p>&nbsp;</p>
+<p>8.2&nbsp;We may allow access to your personal data by third parties who supply us with a service - for the purpose of their service only and in accordance with our instructions.&nbsp;Examples include website hosts and businesses which assist us in undertaking communications or monitoring our site.</p>
+<p>&nbsp;</p>
+<p>8.3&nbsp;We or third party financial service providers may supply your personal data to relevant credit reference and fraud prevention agencies, who may themselves keep a record of that information and who may make it available to third parties.</p>
+<p>&nbsp;</p>
+<p>8.4&nbsp; We may disclose personal data so far as reasonably necessary:</p>
+<p>a)&nbsp;if we think you have or may have breached our terms and conditions or to enforce our rights or protect the public or where we have reasonable grounds for believing that a criminal act has been committed or if we are required to do so by law or appropriate authority; or</p>
+<p>b)&nbsp;in the case of an actual or proposed (including negotiations for a) sale or merger or business combination involving all or the relevant part of our business.</p>
+<p>&nbsp;</p>
+<p>8.5&nbsp; We may share your information with any other companies within our group for the purposes stated in this privacy policy.</p>
+<p>&nbsp;</p>
+<p>8.6&nbsp;We may store or transfer personal data outside the European Economic Area for the purposes stated in this policy.</p>
+<p>&nbsp;</p>
+<p>8.7&nbsp; Except as otherwise specifically included in this policy, this document addresses only the use and disclosure of information we collect from you. If you disclose your information to third parties, whether they are other users of our site or other websites, different rules may apply to their use or disclosure of your information.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>9. </strong><strong>How can you access and rectify personal data? </strong><em> </em></li>
+</ol>
+<p>9.1&nbsp;You can access and rectify your personal data by contacting us by the means shown on our website. We may charge an administration fee in line with data protection laws.</p>
+<p>&nbsp;</p>
+<p>9.2&nbsp;For information about your rights under UK data protection laws, see the website of the <a href="http://www.ico.gov.uk/">UK Information Commissioner </a></p>
+<p>&nbsp;</p>
+<p><a href="http://www.adlexsolicitors.co.uk/internet-law/privacy.htm">Website privacy policy by internet lawyers Adlex solicitors</a></p>
+<p>&nbsp;</p>
+<p>Version <strong>1.1</strong></p>
+<p><strong> </strong></p>
+<p>&nbsp;</p>
+</div></div></div>
+<script src="js/jquery-1.9.1.js"></script>
+<script>
+$(document).bind("mobileinit", function () {
+$.support.cors = true;
+$.mobile.page.prototype.options.backBtnTheme = "b";
+$.mobile.page.prototype.options.backBtnText = "Back";
+$.mobile.loader.prototype.options.theme = "a";
+$.mobile.pageLoadErrorMessage = "Error Loading Data";
+$.mobile.loadingMessage = 'Loading....';
+$.mobile.loadingMessageTextVisible = true;
+$.extend($.mobile, {defaultPageTransition: 'none'});
+});
+</script>
+<link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" /><!--jquery mobile theme-->
+<link rel="stylesheet" href="css/mobiscroll/mobiscroll.jqm.css" /> 
+<script src="js/jquery.mobile-1.3.1.js"></script>
+<script src="js/jqmobi.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<script src="js/geo/jquery.geocomplete.js"></script>
+<script>
+$(function(){
+$("#formatted_address").geocomplete({
+map: ".map_canvas",
+details: "form",
+types: ["geocode", "establishment"],
+country: 'uk'
+});
+$("#formatted_address").change(function(){
+$("#formatted_address").trigger("geocode");
+});
+});
+</script>
+<script>
+$(document).on('pagebeforeshow','#step1',function(e,data){ 
+var now = new Date();
+var curr = new Date().getFullYear();
+var startD = new Date().getDate();
+$('#DateOfBirth').mobiscroll().date({
+endYear: curr -18,
+//maxDate:new Date( curr + 1, now.getMonth(), startD + 1),
+dateFormat: 'dd/mm/yyyy',
+dateOrder:'M ddyy',
+theme: 'android',
+display: 'modal',
+mode: 'scroller', 
+animate: 'pop',});
+});
+$(document).on('pagebeforeshow','#step3',function(e,data){ 
+$('#NextPayDate').mobiscroll().date({
+dateFormat: 'dd/mm/yyyy',
+dateOrder:'M ddyy',
+theme: 'android',
+display: 'modal',
+mode: 'scroller', 
+animate: 'pop',});
+$('#FollowingPayDate').mobiscroll().date({
+dateFormat: 'dd/mm/yyyy',
+dateOrder:'M ddyy',
+theme: 'android',
+display: 'modal',
+mode: 'scroller', 
+animate: 'pop',});
+});
+$(document).delegate('#step1', 'pageshow', function () {
+$('input#LoanAmount').slider();
+$("form#f_step1").validate({
+onfocusout: false,
+rules:{
+Title :{required: true},
+LoanAmount: {required: true,number: true,min:100,max:1000},
+MobileNumber: {required: true,UKmobile: true},
+HomeTelephone: {required: true,UKHome: true},
+EmailAddress: {required: true,email: true},
+FirstName: {required: true,letters: true,minlength:2},
+Surname: {required: true,letters: true,minlength:2},
+DateOfBirth: {required: true}},
+submitHandler: function (){$.mobile.changePage("#step2");
+return false;},
+invalidHandler: function(form, validator) {
+var errors = validator.numberOfInvalids();
+if (errors) {validator.errorList[0].element.focus();}}
+});});
+$(document).delegate('#step2', 'pageshow', function () {
+$("form#f_step2").validate({
+onfocusout: false,
+rules:{
+formatted_address :{required: true},
+locality :{required: true},
+sublocality :{required: true},
+route :{required: true},
+postal_code :{required: true},
+TimeAtAddress :{required: true},
+HomeType :{required: true},
+},
+submitHandler: function () {$.mobile.changePage("#step3");
+return false;},
+invalidHandler: function(form, validator) {
+var errors = validator.numberOfInvalids();
+if (errors) {validator.errorList[0].element.focus();}}
+});});
+$(document).delegate('#step3', 'pageshow', function () {
+$("form#f_step3").validate({
+onfocusout: false,
+rules :{
+PrimaryIncome :{required : true},
+AfterTax :{required : true, number: true},
+PayFrequency :{required : true},
+EmploymentIndustry :{required : true},
+EmployerName :{required : true},
+FollowingPayDate :{required : true},
+NextPayDate :{required : true},
+TimeWithEmployer :{required : true},
+JobTitle :{required : true},
+WorkNumber :{required : true,UKHome: true},
+},
+submitHandler: function () {$.mobile.changePage("#step4");
+return false;},
+invalidHandler: function(form, validator) {
+var errors = validator.numberOfInvalids();
+if (errors) {validator.errorList[0].element.focus();}}
+});});
+$(document).delegate('#step4', 'pageshow', function () {
+$.fn.serializeObject = function(){
+var o = {};
+var a = this.serializeArray();
+$.each(a, function() {
+if (o[this.name] !== undefined) {
+	if	(!o[this.name].push) {
+		o[this.name] = [o[this.name]];
+}
+	o[this.name].push(this.value || '');
+} else {
+	o[this.name] = this.value || '';
+}
+});
+return o;
+};
+$("form#f_step4").validate({
+onfocusout: false,
+rules :{
+SortCode :{required: true,number: true, minlength:6},
+BankAccountNumber :{required: true,number: true, minlength:8},
+OtherExpenditure :{required: true, number: true},
+CreditExpenditure :{required: true, number: true},
+HousingExpenditure :{required: true, number: true},
+DebitCardType :{required: true},
+PaidIntoBankAccount :{required: true},
+},
+submitHandler: function () {
+$.mobile.loadingMessage = 'Submiting Your Details';
+$.mobile.showPageLoadingMsg();
+var data = JSON.stringify($('form').serializeObject());
+$.post('http://www.payday-loans-for.me.uk/mobile/test.php',{'data':JSON.stringify($('form').serializeObject())},function(result){
+if (result == "#begin"){
+alert("Thank you for submitting the details. Someone will be in touch very shortly.");
+$.mobile.changePage("#begin");}
+if (result != "#begin"){window.location.href=result;}
+});
+},
+invalidHandler: function(form, validator) {
+var errors = validator.numberOfInvalids();
+if (errors) {validator.errorList[0].element.focus();}}
+});
+});
+$(document).delegate('#about', 'pageshow', function () {
+});
+$(document).delegate('#privacy', 'pageshow', function () {
+});
+</script>
+</body>
+</html>
